@@ -49,12 +49,11 @@ table {
 
 /* --------------------------------------- */
 /* --------------------------------------- */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&subset=chinese-traditional');
+/* @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&subset=chinese-traditional'); */
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 *{
-    /* font-family: 'Noto Sans TC', '微軟正黑體', sans-serif; */
     font-family: 'Noto Sans TC', '微軟正黑體', sans-serif ;
 }
-
 
 html,body {
     display: block;
