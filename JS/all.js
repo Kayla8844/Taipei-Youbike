@@ -160,8 +160,10 @@ xhr.send(null);
 
 var stationList = document.getElementById('station_list')
 var mapTitle = document.querySelector('#mapModal .modal-title')
+let collection = document.querySelector('.collection_list');
 
 stationList.addEventListener('click', popUpMap)
+collection.addEventListener('click', popUpMap)
 
 function popUpMap(e) {
     if (!e.target.classList.contains('address')) {
@@ -221,8 +223,7 @@ function initMap(mapItem) {
 // ====================================================
 // 04. 加入我的最愛
 
-let collection = document.querySelector('.collection_list');
-let dialog = document.querySelector('.dialog');
+let dialog = document.querySelector('.alert_dialog');
 let alertTxt = document.querySelector('.alert_txt');
 let closeBtn = document.querySelector('.close_btn');
 // let alertContent = document.querySelector('#alertModal .modal-title');

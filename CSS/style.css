@@ -180,7 +180,7 @@ select:hover {
 
 /* ================================== */
 /* 加入我的最愛提醒 */
-.dialog {
+.alert_dialog {
     width: 200px;
     position: fixed;
     left: 50%;
