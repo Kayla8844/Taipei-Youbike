@@ -49,6 +49,12 @@ table {
 
 /* --------------------------------------- */
 /* --------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&subset=chinese-traditional');
+*{
+    /* font-family: 'Noto Sans TC', '微軟正黑體', sans-serif; */
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif ;
+}
+
 
 html,body {
     display: block;
@@ -64,6 +70,7 @@ header {
     z-index: 1000;
     padding: 20px;
     background-color: #d3d459;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif ;
 }
 
 .head {
@@ -304,11 +311,10 @@ main {
     transition: 0.2s ease-in-out;
 }
 
-.list_data_all:hover {
-    /* transform: translateY(-5px); */
+/* .list_data_all:hover {
     transform: scale(1.03);
     overflow: hidden;
-}
+} */
 
 .list_data {
     height: 100%;
