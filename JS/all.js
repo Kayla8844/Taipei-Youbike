@@ -21,7 +21,7 @@ let filterDataList = []; // 篩選出同區的資料
 let favList = JSON.parse(localStorage.getItem('favItem')) || [];
 
 // 刪除我的最愛裡重複的資料
-favList.filter(function (el, i, arr) {
+favList.filter(function(el, i, arr) {
     arr.indexOf(el) === i;
 });
 
@@ -36,7 +36,7 @@ xhr.setRequestHeader('Content-type', 'application/json');
 // 01. 取得後端總資料
 
 
-xhr.onload = function () {
+xhr.onload = function() {
     var callbackData = JSON.parse(xhr.responseText);
     console.log(callbackData);
 
@@ -53,7 +53,7 @@ xhr.onload = function () {
     }
     // console.log(callbackDataGB)
 
-    var len = callbackDataGB.length;  // 400
+    var len = callbackDataGB.length; // 400
     var listAll = document.querySelector('#station_list');
     var select = document.getElementById('selectId');
     var numTxt = document.getElementById('num_txt');
@@ -213,7 +213,7 @@ function initMap(mapItem) {
         content: `<a href="https://www.google.com.tw/maps/dir//${mapItem.lat},${mapItem.lng}" target="_blank">地址： ${mapItem.ar}</a>`
     });
     // https://www.google.com.tw/maps/dir//25.046916,121.531428
-    marker.addListener('click', function () {
+    marker.addListener('click', function() {
         infoWindow.open(map, marker);
     });
 
@@ -229,7 +229,7 @@ let closeBtn = document.querySelector('.close_btn');
 // let alertContent = document.querySelector('#alertModal .modal-title');
 
 stationList.addEventListener('click', saveFav);
-closeBtn.addEventListener('click', function () {
+closeBtn.addEventListener('click', function() {
     dialog.classList.add('disable')
 })
 
@@ -270,10 +270,10 @@ function saveFav(e) {
 
     } else {
         alertTxt.textContent = '已加入我的最愛';
-        setTimeout(() => {
-            alert.modal('hide')
+        // setTimeout(() => {
+        //     alert.modal('hide')
 
-        }, 1500);
+        // }, 1500);
 
         let favItem = {};
         callbackDataGB.forEach(el => {
@@ -383,7 +383,7 @@ function deleteCollection(e) {
 let menuAll = document.querySelector('.menu_all');
 let menuBtn = document.querySelectorAll('.menu_btn');
 let menuContent = document.querySelectorAll('.menu_content');
-menuAll.addEventListener('click', function (e) {
+menuAll.addEventListener('click', function(e) {
     if (!e.target.classList.contains('menu_btn')) {
         return
     }
@@ -410,5 +410,3 @@ menuAll.addEventListener('click', function (e) {
         // el.classList.remove('show')
     });
 })
-
-
