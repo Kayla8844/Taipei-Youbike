@@ -56,7 +56,7 @@ xhr.onload = function() {
     var len = callbackDataGB.length; // 400
     var listAll = document.querySelector('#station_list');
     var select = document.getElementById('selectId');
-    var numTxt = document.getElementById('num_txt');
+    var numTxt = document.getElementById('num_txt'); // 此區共幾站
     let storage = document.querySelectorAll('.storage')
 
     // 選擇行政區域後，執行 updateList 方法
@@ -67,6 +67,7 @@ xhr.onload = function() {
         var value = e.target.value;
         var str = '';
 
+        // 比對區域
         for (var i = 0; i < len; i++) {
             if (callbackDataGB[i].sarea == value) {
                 filterDataList.push(callbackDataGB[i])
@@ -248,6 +249,8 @@ function saveFav(e) {
     // console.log(targetItemTitle)
     // console.log(filterDataList)
 
+
+
     // 如果愛心顯示橘色，按下的時候就取消橘色，並從我的最愛裡刪除當下那筆資料
     if (e.target.classList.contains('recorded')) {
         e.target.classList.remove('recorded');
@@ -363,9 +366,10 @@ function deleteCollection(e) {
     printCollection();
 
     // ======================
-    // 搜尋列表
+    // 列表那也要取消愛心
     let targetItemTitle = e.target.parentElement.nextElementSibling.querySelector('.list_title').textContent;
 
+    // 取得區域站全部站名
     let findItemTitle = stationList.querySelectorAll('.list_title');
 
     findItemTitle.forEach(el => {
